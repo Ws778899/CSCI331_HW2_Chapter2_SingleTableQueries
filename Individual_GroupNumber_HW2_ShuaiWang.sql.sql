@@ -22,6 +22,11 @@
 )
 SELECT *
 FROM OrderValues;
+
+-- Quick schema verification
+SELECT s.name AS schema_name, t.name AS table_name
+FROM sys.tables t JOIN sys.schemas s ON t.schema_id = s.schema_id
+ORDER BY 1,2;
 ---------------------------------------------------------------------
 
 -- Listing 2-1: Sample Query
